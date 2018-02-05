@@ -6,8 +6,9 @@ const modal     = document.getElementById('js-modal');
 
 btn.addEventListener('click', function(){
     const openHeight = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
+    window.pageYOffset = openHeight;
     modal.classList.toggle('is-open');
-    contents.classList.toggle('is-none');
+    // contents.classList.toggle('is-none');
 });
 
 window.addEventListener('scroll', function(){
